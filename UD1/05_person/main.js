@@ -4,8 +4,18 @@
 const assert = require('assert').strict;
 
 function createPerson(name, lastname, years, gender, address) {
+    let persona = {
+        name, 
+        lastname, 
+        years, 
+        gender,
+        address
+    }
+
+    return persona;
 }
 
-let person = createPerson('John', 'Foo', 35, 'male', 'fake stree 123')
-assert.strictEqual(person.name, 'John')
-assert.strictEqual(person.lastname, 'Foo')
+let person = createPerson('John', 'Foo', 35, 'male', 'fake stree 123');
+assert.strictEqual(person.name, 'John');
+assert.strictEqual(person.lastname, 'Foo');
+console.log(person);

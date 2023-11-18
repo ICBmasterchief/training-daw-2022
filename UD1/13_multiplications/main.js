@@ -1,5 +1,32 @@
 function printMultiplicationTables() {
+    let matrix = ["    "];
+    let content = [];
+    for (let i = 1; i <= 10; i++){
+        content.push(i);
+        matrix.push(tableFormat(i));
+    }
+    matrix = [String(matrix)];
+    for (let column of content){
+        let cont = [tableFormat(column)]
+        for (let row of content){
+            let result = column * row;
+            cont.push(tableFormat(result));        
+        }
+        matrix.push(String(cont));
+    }
+    console.log(matrix);
+}
 
+function tableFormat(val){
+    let result = "";
+    if (val >= 100){
+        result = " "+String(val);
+    } else if (val >= 10){
+        result = "  "+String(val);
+    } else {
+        result = "   "+String(val);
+    }
+    return result;
 }
 
 printMultiplicationTables()
