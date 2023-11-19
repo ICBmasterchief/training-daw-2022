@@ -5,14 +5,14 @@ function printMultiplicationTables() {
         content.push(i);
         matrix.push(tableFormat(i));
     }
-    matrix = [String(matrix)];
+    matrix = [matrix.join(" ")];
     for (let column of content){
         let cont = [tableFormat(column)]
         for (let row of content){
             let result = column * row;
             cont.push(tableFormat(result));        
         }
-        matrix.push(String(cont));
+        matrix.push(cont.join(" "));
     }
     console.log(matrix);
 }
