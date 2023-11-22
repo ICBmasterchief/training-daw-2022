@@ -1,23 +1,17 @@
 function pingPong() {
 
-    //let numbers = [];
-    let isPing = true;
-    let pingPong = "";
 
     for (let i = 1; i <= 20; i++){
-        if(i % 5 === 0){
-            if(isPing){
-                pingPong = " PING";
-                isPing = false;
-            } else {
-                pingPong = " PONG";
-                isPing = true;
-            }
-            //numbers.push(i+pingPong);
-            console.log(i+pingPong);
-        } else {
+        if(i % 10 === 0){
+            console.log(i + " PONG")
+
+        } else if(i % 5 === 0) {
             //numbers.push(i);
+            console.log(i + " PING")
+
+        } else {
             console.log(i);
+
         }
     }
 
